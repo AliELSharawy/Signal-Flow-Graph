@@ -1,5 +1,7 @@
 # SignalFlowGraph
 
+[project report control.pdf](https://github.com/AliELSharawy/Signal-Flow-Graph/files/8627842/project.report.control.pdf)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
 
 ## Development server
