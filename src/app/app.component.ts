@@ -34,22 +34,20 @@ export class AppComponent implements OnInit {
 
   loopsGainMap = new Map<string, number>();
   forwardPathsGainMap = new Map<string, number>();
+  loopsGainArr: Array<number> = [];
+  forwardPathsGainArr: Array<number> = [];
   deltaValuesArray: Array<number> = [];
   delta: number = 0;
 
   @ViewChild('myCanvas', { static: true }) myCanvas: ElementRef = {} as ElementRef;
   ctx: CanvasRenderingContext2D = {} as CanvasRenderingContext2D;
 
-  ///////////////////// my work ///////////////////////
   ngOnInit():void{
     this.ctx = this.myCanvas.nativeElement.getContext('2d');
   }
   processGraph(): number {
 
     this.extractInfo(this.nodes);
-
-    //////// my work /////////
-
 
     // paths gain
     for (let i = 0; i < this.forwardPaths.length; i++) {
@@ -89,13 +87,15 @@ export class AppComponent implements OnInit {
     // transfer function calculation
     let tf = this.transferFunctionCalculator();
     console.log("transfer fn = " + tf);
+    this.showGain();
     return tf;
-    //////// my work /////////
   }
 
+  showGain(){
+      this.forwardPathsGainMap.forEach((value, key) => {this.forwardPathsGainArr.push(value)});
+      this.loopsGainMap.forEach(((value, key) => {this.loopsGainArr.push(value)}));
 
-
-  //////// my work ///////////
+  }
 
   transferFunctionCalculator() {
     let pathDeltaSum = 0;
@@ -143,7 +143,6 @@ export class AppComponent implements OnInit {
     return deltaLoops;
 
   }
-
 
   deltaCalculator(subsetLoops: Array<Array<string>>) {
     // length --> gain to add summation
@@ -193,8 +192,6 @@ export class AppComponent implements OnInit {
     return true;
   }
 
-
-
   getCombinationLoops(loopArr: Array<string>) {
     let result = [];
 
@@ -215,10 +212,6 @@ export class AppComponent implements OnInit {
 
     return result;
   }
-
-
-  ///////// my work ///////////
-
 
   extractInfo(nodes: Array<Node>) {
     nodes.forEach((node) => {
@@ -263,7 +256,6 @@ export class AppComponent implements OnInit {
     }
   }
 
-  /* My Functions */
   public takeInput(): void {
     this.started = true;
     for (let i = 0; i < this.nodesNumber; i++) {
@@ -327,8 +319,6 @@ export class AppComponent implements OnInit {
         return 0;
       }
     }
-
-
 
     this.ctx.beginPath();
     this.ctx.strokeStyle = "black";

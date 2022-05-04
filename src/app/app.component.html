@@ -12,7 +12,9 @@
 <button *ngIf="!finished && started" (click)="calculate()">calculate</button>
 <div *ngIf="finished">
     <p>Forward Paths: {{forwardPaths.join(', ')}}</p>
+    <p>Forward Paths Gain: {{forwardPathsGainArr.join(', ')}}</p>
     <p>Loops: {{loops.join(', ')}}</p>
+    <p>Loops Gain: {{loopsGainArr.join(', ')}}</p>
     <p>Delta Array Values: {{deltaValuesArray.join(', ')}}</p>
     <p>Delta = {{delta}} </p>
     <p>Transfer Function: {{overAllTF}}</p>
