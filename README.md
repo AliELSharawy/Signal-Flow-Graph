@@ -1,4 +1,4 @@
-# SignalFlowGraph
+# Signal Flow Graph
 
 [project report control.pdf](https://github.com/AliELSharawy/Signal-Flow-Graph/files/8627842/project.report.control.pdf)
 
