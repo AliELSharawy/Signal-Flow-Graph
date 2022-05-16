@@ -1,4 +1,3 @@
 # Signal Flow Graph
-Implemented using Angular Framework
-
-[project report control.pdf](https://github.com/AliELSharawy/Signal-Flow-Graph/files/8627842/project.report.control.pdf)
+Implemented using Angular Framework \
+User insert number of nodes and branches then the forward paths with gain, loops with gain, delta, delta for each path and transfer function will be shown for user
