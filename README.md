@@ -22,16 +22,16 @@
   - Class “Node Drawer” to store the information about the drawed nodes and draw them.
 
 ## Algorithms
-  ● “pathTraverse”: a recursive function to traverse a graph starting from a given node, trying all combinations of paths to obtain forward paths and loops from the      graph, adding them to their corresponding arrays.
-  ● “extractInfo”: function to call “pathTraverse” on each node, extracting the forward paths and filtering the duplicates from the extracted loops.
-  ● We loop on each forward path and loop to calculate gain and push it to forward paths gain array and loop gain array.
-  ● “Gain calculator”: we loop on edges of path or loop and multiple values in the adjacency matrix.
-  ● We get all possible combinations of loops to check touching loops by “check touching validity”.
-  ● “check touching validity”: we loop on each loop combination and check if a node is repeated or not to check validity a node can’t be duplicated.
-  ● “Delta calculator”: we check the validity of each combination of loops so if it is valid we add its gain to the non touching len gain map according to its number       of loops in combination.
-  ● “Get delta loops”: get the loops after removing each path to calculate delta for this path.
-  ● “Delta array calculator”: we loop on each path and get loops after removing this path and get all combinations of these loops to calculate delta and push it to         the delta array.
-  ● “Transfer function calculator”: from delta array and paths gain and delta we calculate transfer function value.
+  - “pathTraverse”: a recursive function to traverse a graph starting from a given node, trying all combinations of paths to obtain forward paths and loops from the      graph, adding them to their corresponding arrays.
+  - “extractInfo”: function to call “pathTraverse” on each node, extracting the forward paths and filtering the duplicates from the extracted loops.
+  - We loop on each forward path and loop to calculate gain and push it to forward paths gain array and loop gain array.
+  - “Gain calculator”: we loop on edges of path or loop and multiple values in the adjacency matrix.
+  - We get all possible combinations of loops to check touching loops by “check touching validity”.
+  - “check touching validity”: we loop on each loop combination and check if a node is repeated or not to check validity a node can’t be duplicated.
+  - “Delta calculator”: we check the validity of each combination of loops so if it is valid we add its gain to the non touching len gain map according to its number       of loops in combination.
+  - “Get delta loops”: get the loops after removing each path to calculate delta for this path.
+  - “Delta array calculator”: we loop on each path and get loops after removing this path and get all combinations of these loops to calculate delta and push it to         the delta array.
+  - “Transfer function calculator”: from delta array and paths gain and delta we calculate transfer function value.
 
 ## Implemented using Angular Framework. \
 
