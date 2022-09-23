@@ -33,6 +33,16 @@
   - “Delta array calculator”: we loop on each path and get loops after removing this path and get all combinations of these loops to calculate delta and push it to         the delta array.
   - “Transfer function calculator”: from delta array and paths gain and delta we calculate transfer function value.
 
-## Implemented using Angular Framework. \
+## User Guide
+  - At first you enter the total number of nodes in the signal flow graph.
+  - ![{C23336E1-FBB6-45D5-ACD8-31736817DFE5} png](https://user-images.githubusercontent.com/95590176/192013913-1268da3e-e8b0-469c-9bdb-c6381057e26f.jpg)
+  - To set a gain between 2 nodes you enter the number of the first node and the number of the second node and the gain and press “Enter”
+  - ![{A7C4F554-580D-4F07-BC4B-C46C87A06086} png](https://user-images.githubusercontent.com/95590176/192014111-9f0a7427-df05-4a83-a09c-35954ee54064.jpg)
+  - When you finish entering the gains press on “Calculate” and the result will appear.
+  - ![{41E72B59-369D-4555-A7EB-675FE07E157C} png](https://user-images.githubusercontent.com/95590176/192014496-1889e4ec-c0ff-4183-8d39-d8d190295d56.jpg)
+
+
+
+## Implemented using Angular Framework.
 
 User insert number of nodes and branches then the forward paths with gain, loops with gain, delta, delta for each path and transfer function will be shown for user.
